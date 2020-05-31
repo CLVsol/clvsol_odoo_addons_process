@@ -4,7 +4,7 @@
 
 import logging
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 _logger = logging.getLogger(__name__)
 
@@ -25,7 +25,7 @@ class ProcessingScheduleExecute(models.TransientModel):
         string='Processing Schedules',
         default=_default_processing_schedule_ids)
 
-    @api.multi
+    # @api.multi
     def do_processing_schedule_execute(self):
         self.ensure_one()
 

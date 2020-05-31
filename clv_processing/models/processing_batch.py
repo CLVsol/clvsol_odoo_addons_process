@@ -10,7 +10,7 @@ class ProcessingBatch(models.Model):
     _name = 'clv.processing.batch'
     _order = 'name'
 
-    @api.multi
+    # @api.multi
     @api.depends('name', 'code')
     def name_get(self):
         result = []
