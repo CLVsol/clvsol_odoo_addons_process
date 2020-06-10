@@ -32,10 +32,9 @@
     <act_window 
         id="clv_processing_schedule_execute_action"
         name="Processing Schedule Execute"
-        src_model="clv.processing.schedule"
+        binding_model="clv.processing.schedule"
         res_model="clv.processing.schedule.execute"
         view_mode="form"
-        key2="client_action_multi"
         target="new"
     />
 
