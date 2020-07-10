@@ -30,6 +30,7 @@
         # 'views/referenceable_model_view.xml',
         # 'data/processing_batch_member.xml',
         'wizard/processing_schedule_exec_view.xml',
+        'data/global_log_client.xml',
     ],
     'demo': [],
     'test': [],
