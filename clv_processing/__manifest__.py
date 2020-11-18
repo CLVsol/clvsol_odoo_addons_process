@@ -29,7 +29,7 @@
         # # 'views/processing_batch_member_view.xml',
         # # 'views/referenceable_model_view.xml',
         # # 'data/processing_batch_member.xml',
-        # 'wizard/processing_schedule_exec_view.xml',
+        'wizard/processing_schedule_exec_view.xml',
         'views/processing_menu_view.xml',
         'data/global_log_client.xml',
     ],
