@@ -39,6 +39,12 @@ class ProcessingTemplate(models.Model):
         help="Name of the method to be called when the data processing job is processed."
     )
 
+    method_args = fields.Char(
+        string='Method Arguments',
+        required=False,
+        help="List  of arguments(Python dictionary format) for the method."
+    )
+
     active = fields.Boolean(string='Active', default=1)
 
     _sql_constraints = [

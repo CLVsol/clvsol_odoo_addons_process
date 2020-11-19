@@ -30,6 +30,7 @@
                         <group name="group_right">
                             <field name="model"/>
                             <field name="method"/>
+                            <field name="method_args"/>
                         </group>
                     </group>
                     <field name="notes" placeholder="Notes..." colspan="4"/>
@@ -79,6 +80,7 @@
                 <field name="date_inclusion"/>
                 <field name="model"/>
                 <field name="method"/>
+                <field name="method_args"/>
                 <field name="notes"/>
                 <field name="active" invisible="1"/>
             </tree>
@@ -96,12 +98,15 @@
                 <field name="date_inclusion"/>
                 <field name="model"/>
                 <field name="method"/>
+                <field name="method_args"/>
                 <field name="notes"/>
                 <separator/>
                 <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
                 <group name="group_by" string="Group By...">
                     <filter name="filter_external_host_id" string="External Host" context="{'group_by': 'external_host_id'}"/>
                     <filter name="filter_model" string="Model" context="{'group_by': 'model'}"/>
+                    <filter name="filter_method" string="Method" context="{'group_by': 'method'}"/>
+                    <filter name="filter_method_args" string="Method Arguments" context="{'group_by': 'method_args'}"/>
                 </group>
             </search>
         </field>
