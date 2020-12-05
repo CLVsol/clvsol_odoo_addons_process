@@ -29,13 +29,12 @@
     </record>
 
     <!-- More button Action -->
-    <act_window 
-        id="clv_processing_schedule_execute_action"
-        name="Processing Schedule Execute"
-        binding_model="clv.processing.schedule"
-        res_model="clv.processing.schedule.execute"
-        view_mode="form"
-        target="new"
-    />
+    <record id="clv_processing_schedule_execute_action" model="ir.actions.act_window">
+        <field name="name">Processing Schedule Execute</field>
+        <field name="binding_model_id" ref="model_clv_processing_schedule"/>
+        <field name="res_model">clv.processing.schedule.execute</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
 
 </odoo>

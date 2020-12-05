@@ -46,6 +46,12 @@ class ProcessingSchedule(models.Model):
         help="Name of the method to be called when the data processing job is processed."
     )
 
+    method_args = fields.Char(
+        string='Method Arguments',
+        required=False,
+        help="List  of arguments(Python dictionary format) for the method."
+    )
+
     processing_log = fields.Text(
         string="Processing Log"
     )
@@ -67,6 +73,7 @@ class ProcessingSchedule(models.Model):
             schedule.external_host_id = schedule.template_id.external_host_id
             schedule.model = schedule.template_id.model
             schedule.method = schedule.template_id.method
+            schedule.method_args = schedule.template_id.method_args
 
         return schedule
 
@@ -76,6 +83,7 @@ class ProcessingSchedule(models.Model):
             self.external_host_id = self.template_id.external_host_id
             self.model = self.template_id.model
             self.method = self.template_id.method
+            self.method_args = self.template_id.method_args
 
 
 class ProcessingTemplate(models.Model):
